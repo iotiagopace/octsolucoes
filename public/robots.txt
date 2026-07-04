@@ -1,0 +1,22 @@
+# TODO: atualizar a linha Sitemap com o domínio final assim que estiver definido.
+User-agent: *
+Allow: /
+
+# Páginas herdadas do template "dustrilox" (demo), sem link no site real e sem
+# conteúdo da OCT Soluções — bloqueadas para não gerar ruído de indexação.
+Disallow: /about
+Disallow: /blog
+Disallow: /blog-details
+Disallow: /contact
+Disallow: /faq
+Disallow: /home-two
+Disallow: /home-three
+Disallow: /portfolio
+Disallow: /portfolio-details
+Disallow: /pricing
+Disallow: /services
+Disallow: /services-details
+Disallow: /team
+Disallow: /team-details
+
+Sitemap: [DOMÍNIO_PLACEHOLDER]/sitemap.xml
