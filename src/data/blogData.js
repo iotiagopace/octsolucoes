@@ -1,0 +1,46 @@
+const blogData = [
+    {
+        id:1,
+        img:'assets/img/blog/blog-sm-1.jpg',
+        imgBig:'assets/img/blog/blog-d-1.jpg',
+        imgTwo:'assets/img/blog/blog-1.jpg',
+        date:'Feb 23, 2022',
+        title:'User review is a review conducted the mutual',
+        titleTwo:'Both the act of teaching knowledge to others and the act of kind.',
+        author:'IQBAL',
+        authorThree:'Nick James',
+    },
+    {
+        id:2,
+        img:'assets/img/blog/blog-sm-2.jpg',
+        imgBig:'assets/img/blog/blog-d-2.jpg',
+        imgTwo:'assets/img/blog/blog-2.jpg',
+        date:'Feb 26, 2022',
+        title:'An industry is a group of that companies is',
+        titleTwo:'How To Build And Launch Powerful Responsive Websites With Editor.',
+        author:'MAXSON',
+        authorThree:'Alon James',
+        video:true,
+    },
+    {
+        id:3,
+        img:'assets/img/blog/blog-sm-3.jpg',
+        imgBig:'assets/img/blog/blog-d-3.jpg',
+        imgTwo:'assets/img/blog/blog-3.jpg',
+        date:'Feb 28, 2022',
+        title:'By any person who has access to the internet',
+        titleTwo:'New items are released weekly. Check out some of our newest.',
+        author:'CHOPPER',
+        authorThree:'Sanji Max',
+        slider:true,
+    },
+    {
+        id:4,
+        img:'assets/img/blog/blog-sm-4.jpg',
+        imgBig:'assets/img/blog/blog-d-4.jpg',
+        date:'Feb 20, 2022',
+        title:'Their experience to any review site or',
+    },
+]
+
+export default blogData;
