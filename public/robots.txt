@@ -1,4 +1,3 @@
-# TODO: atualizar a linha Sitemap com o domínio final assim que estiver definido.
 User-agent: *
 Allow: /
 
@@ -19,4 +18,5 @@ Disallow: /services-details
 Disallow: /team
 Disallow: /team-details
 
-Sitemap: [DOMÍNIO_PLACEHOLDER]/sitemap.xml
+# TODO: trocar por domínio próprio caso configurado no Vercel.
+Sitemap: https://octsolucoes.vercel.app/sitemap.xml

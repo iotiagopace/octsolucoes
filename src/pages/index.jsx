@@ -2,8 +2,8 @@ import Head from "next/head";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 
-// TODO: domínio final do site ainda não foi definido — substituir antes de publicar.
-const siteUrl = "[DOMÍNIO_PLACEHOLDER]";
+// Domínio de produção atual. TODO: trocar por domínio próprio (ex: https://octsolucoes.com.br) caso seja configurado no Vercel.
+const siteUrl = "https://octsolucoes.vercel.app";
 // TODO: substituir pelo número de WhatsApp real da OCT Soluções (formato 55DDDNUMERO, só dígitos).
 const whatsappNumber = "5511999999999";
 // TODO: gerar uma imagem dedicada 1200x630 para Open Graph/Twitter em vez de reaproveitar a foto do produto.
@@ -92,7 +92,6 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#ed1c24" />
         <link rel="apple-touch-icon" href={appleTouchIcon} />
-        {/* TODO: atualizar para o domínio final assim que estiver definido. */}
         <link rel="canonical" href={siteUrl} />
 
         <meta property="og:type" content="website" />
