@@ -60,16 +60,18 @@ h1 em, h2 em { color: var(--red); font-style: normal; }
 .hero-index { position: absolute; right: 4.8vw; top: 120px; font: 11px Inter; letter-spacing: .2em; opacity: .5; }
 
 .ticker { background: var(--red); color: white; overflow: hidden; height: 54px; display: flex; align-items: center; }
-.ticker > div { display: flex; gap: 34px; white-space: nowrap; animation: ticker 19s linear infinite; font: 15px "Archivo Black"; letter-spacing: .06em; }
+.ticker-track { display: flex; width: max-content; white-space: nowrap; animation: ticker 19s linear infinite; font: 15px "Archivo Black"; letter-spacing: .06em; will-change: transform; }
+.ticker-set { display: flex; align-items: center; gap: 34px; padding-right: 34px; }
 .ticker b { color: #151515; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
-.section-pad { padding: 115px 7.5vw; }
+.section-pad { padding: 115px max(7.5vw, calc((100vw - 1440px) / 2)); }
 .section-number { border-top: 1px solid var(--line); padding-top: 18px; color: #777; }
-.problem-heading { display: grid; grid-template-columns: 1.35fr .65fr; gap: 12vw; margin: 65px 0 90px; align-items: end; }
+.problem-heading { display: grid; grid-template-columns: 1.1fr 1fr; gap: 7vw; margin: 65px 0 90px; align-items: start; }
 .problem-heading h2 { font-size: clamp(42px, 5vw, 80px); }
 .problem-heading h2 span { color: #9c9992; }
 .problem-heading p, .about-copy p { font-size: 16px; line-height: 1.8; color: #5e5c57; }
+.problem-intro p + p { margin-top: 18px; }
 .problem-list { border-top: 1px solid var(--line); }
 .problem-list article { min-height: 120px; display: grid; grid-template-columns: 80px 1fr 1fr 30px; align-items: center; border-bottom: 1px solid var(--line); transition: padding .25s, color .25s, transform .25s, box-shadow .25s; background: var(--paper); position: relative; z-index: 1; }
 .problem-list article:hover { padding: 0 18px; color: var(--red); transform: translateY(-4px); box-shadow: 0 18px 30px rgba(13,13,13,.08); }
@@ -105,9 +107,22 @@ h1 em, h2 em { color: var(--red); font-style: normal; }
 .about-proof img { width: 100%; aspect-ratio: .78; object-fit: cover; object-position: center; background: white; }
 .about-proof p { text-transform: uppercase; font-size: 10px; line-height: 1.6; letter-spacing: .12em; border-left: 2px solid var(--red); padding-left: 14px; margin-top: 20px; }
 
-.proof-heading { max-width: 780px; margin-bottom: 55px; }
+.proof-heading { max-width: 780px; margin-bottom: 48px; }
 .proof-heading h2 { font-size: clamp(38px, 4.5vw, 64px); margin-bottom: 22px; }
 .proof-heading p { font-size: 16px; line-height: 1.8; color: #5e5c57; max-width: 600px; }
+
+.client-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 60px; }
+.client-logo {
+  background: #fff; border: 1px solid var(--line); border-radius: 10px; height: 100px;
+  display: flex; align-items: center; justify-content: center; padding: 20px 24px;
+  transition: transform .25s, box-shadow .25s;
+}
+.client-logo img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; }
+.client-logo.dark { background: var(--ink); border-color: var(--ink); }
+.client-logo:hover { transform: translateY(-4px); box-shadow: 0 14px 26px rgba(13,13,13,.10); }
+@media (prefers-reduced-motion: reduce) {
+  .client-logo:hover { transform: none; }
+}
 .proof-videos { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
 .proof-video { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #111; transition: transform .3s, box-shadow .3s; }
 .proof-video:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 24px 40px rgba(13,13,13,.16); }
@@ -175,7 +190,7 @@ footer small.credits a:hover { color: white; }
   .oct-header nav.open { display: flex; }
   .hero { min-height: 760px; height: auto; grid-template-columns: 1fr; padding: 132px 22px 0; }
   .hero-copy { padding: 0; }
-  .hero h1 { font-size: clamp(48px, 14vw, 74px); }
+  .hero h1 { font-size: clamp(34px, 9.5vw, 62px); }
   .hero-copy > p { font-size: 14px; max-width: 90%; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 22px; }
   .hero-product { height: 420px; width: 100%; margin-top: 20px; }
@@ -196,6 +211,8 @@ footer small.credits a:hover { color: white; }
   .about .section-number { writing-mode: initial; border-top: 1px solid var(--line); padding-top: 18px; }
   .about-proof { max-width: 420px; }
   .proof-heading h2 { font-size: 34px; }
+  .client-logos { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .client-logo { height: 84px; padding: 16px 18px; }
   .proof-videos { grid-template-columns: 1fr; gap: 20px; }
   .cta-content h2 { font-size: clamp(38px, 12vw, 60px); }
   .lead-grid { grid-template-columns: 1fr; gap: 40px; }

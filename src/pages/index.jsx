@@ -52,6 +52,17 @@ const staggerItem = {
 
 const emptyForm = { nome: "", whatsapp: "", email: "", cidade: "", loja: "" };
 
+const clientLogos = [
+  { src: "/clientes/rede-mais.png", alt: "Supermercados Rede Mais" },
+  { src: "/clientes/rede-sol.png", alt: "RedeSol Supermercados" },
+  { src: "/clientes/iquegami.webp", alt: "Iquegami Supermercados" },
+  { src: "/clientes/nova-estrela.jpg", alt: "Nova Estrela Rede de Supermercados" },
+  { src: "/clientes/sakashita.jpeg", alt: "Sakashita Supermercados" },
+  { src: "/clientes/rede-paz.png", alt: "Redepas Supermercados" },
+  // Logo branco em fundo transparente: precisa de card escuro para ter contraste.
+  { src: "/clientes/compre-mix.png", alt: "Atacado Compre Mix", dark: true },
+];
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState(emptyForm);
@@ -153,8 +164,8 @@ export default function Home() {
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="eyebrow"><i /> Comunicação promocional para o varejo</span>
-            <h1>Sua oferta pronta para <em>chamar atenção.</em></h1>
-            <p>Impressoras profissionais, software próprio e suporte completo para seu supermercado produzir cartazes melhores em minutos.</p>
+            <h1>Automatize seus cartazes. <em>Recupere suas horas.</em></h1>
+            <p>Crie a oferta, o sistema imprime e distribui pras lojas certas. Sem editar arquivo, sem enviar por WhatsApp, sem reimprimir errado.</p>
             <div className="hero-actions">
               <a className="primary-button" href="#contato">Quero uma demonstração <Arrow /></a>
               <a className="text-link" href="#solucao">Conhecer a solução <span>↓</span></a>
@@ -176,10 +187,15 @@ export default function Home() {
         </section>
 
         <div className="ticker" aria-label="Benefícios OCT">
-          <div>
-            <span>AGILIDADE</span><b>✦</b><span>PADRÃO VISUAL</span><b>✦</b>
-            <span>ALTO VOLUME</span><b>✦</b><span>SUPORTE ESPECIALIZADO</span><b>✦</b>
-            <span>AGILIDADE</span><b>✦</b><span>PADRÃO VISUAL</span><b>✦</b>
+          <div className="ticker-track">
+            <div className="ticker-set">
+              <span>AGILIDADE</span><b>✦</b><span>PADRÃO VISUAL</span><b>✦</b>
+              <span>ALTO VOLUME</span><b>✦</b><span>SUPORTE ESPECIALIZADO</span><b>✦</b>
+            </div>
+            <div className="ticker-set" aria-hidden="true">
+              <span>AGILIDADE</span><b>✦</b><span>PADRÃO VISUAL</span><b>✦</b>
+              <span>ALTO VOLUME</span><b>✦</b><span>SUPORTE ESPECIALIZADO</span><b>✦</b>
+            </div>
           </div>
         </div>
 
@@ -187,7 +203,11 @@ export default function Home() {
           <div className="section-number">02 / O desafio</div>
           <div className="problem-heading">
             <h2>Promoção muda rápido.<br /><span>Seu cartaz também precisa.</span></h2>
-            <p>Chega de perder horas montando artes simples, depender de equipamentos inadequados ou espalhar uma comunicação sem padrão pela loja.</p>
+            <div className="problem-intro">
+              <p>Impressora, qualquer mercado compra. O que falta é tempo: alguém criando o cartaz, ajustando preço, mandando pra loja certa, toda vez que a oferta muda.</p>
+              <p>Com a OCT Soluções, você cria o cartaz uma vez e o sistema cuida do resto: impressão automática, direto na impressora certa, na loja certa, sem retrabalho manual.</p>
+              <p>Funciona pra supermercado, mercadinho, loja de utilidade, açougue, mercearia e loja de festa. Qualquer varejo com comunicação que muda toda semana.</p>
+            </div>
           </div>
           <motion.div className="problem-list" {...reveal} variants={staggerGroup}>
             {[
@@ -246,6 +266,17 @@ export default function Home() {
           <motion.div className="proof-heading" {...reveal} variants={staggerItem}>
             <h2>Supermercados de todo o Brasil <em>já confiam</em><br />na OCT Soluções.</h2>
             <p>Nossa tecnologia ajuda supermercados a produzir cartazes promocionais com mais agilidade, organização e padrão visual todos os dias.</p>
+          </motion.div>
+          <motion.div className="client-logos" {...reveal} variants={staggerGroup} aria-label="Clientes que confiam na OCT Soluções">
+            {clientLogos.map((c) => (
+              <motion.div
+                className={c.dark ? "client-logo dark" : "client-logo"}
+                key={c.src}
+                variants={staggerItem}
+              >
+                <img src={c.src} alt={c.alt} loading="lazy" />
+              </motion.div>
+            ))}
           </motion.div>
           <motion.div className="proof-videos" {...reveal} variants={staggerGroup}>
             <motion.div className="proof-video" variants={staggerItem}>
