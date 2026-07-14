@@ -111,7 +111,7 @@ export default function Home() {
         <meta property="og:title" content="OCT Soluções para supermercados" />
         <meta
           property="og:description"
-          content="Sua oferta pronta para chamar atenção. Impressoras profissionais, software próprio e suporte completo para seu supermercado."
+          content="Automatize seus cartazes e recupere suas horas: crie a oferta, o sistema imprime e distribui pras lojas certas, sem retrabalho manual."
         />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={siteUrl} />
@@ -120,7 +120,7 @@ export default function Home() {
         <meta name="twitter:title" content="OCT Soluções para supermercados" />
         <meta
           name="twitter:description"
-          content="Sua oferta pronta para chamar atenção. Impressoras profissionais, software próprio e suporte completo para seu supermercado."
+          content="Automatize seus cartazes e recupere suas horas: crie a oferta, o sistema imprime e distribui pras lojas certas, sem retrabalho manual."
         />
         <meta name="twitter:image" content={ogImage} />
 
