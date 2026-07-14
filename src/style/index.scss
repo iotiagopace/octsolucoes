@@ -28,8 +28,9 @@ button { font: inherit; }
 .menu-toggle { display: none; background: none; border: 0; }
 
 .hero {
-  min-height: 780px; height: 100svh; background: #121212; color: white; position: relative;
-  overflow: hidden; display: grid; grid-template-columns: 51% 49%; align-items: center; padding-top: 94px;
+  min-height: 100svh; background: #121212; color: white; position: relative;
+  overflow: hidden; display: grid; grid-template-columns: 51% 49%; align-items: center;
+  padding-top: 120px; padding-bottom: 40px;
 }
 .hero-grid {
   position: absolute; inset: 0; opacity: .08;
