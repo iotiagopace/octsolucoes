@@ -4,8 +4,8 @@ import { useState } from "react";
 
 // Domínio de produção atual. TODO: trocar por domínio próprio (ex: https://octsolucoes.com.br) caso seja configurado no Vercel.
 const siteUrl = "https://octsolucoes.vercel.app";
-// TODO: substituir pelo número de WhatsApp real da OCT Soluções (formato 55DDDNUMERO, só dígitos).
-const whatsappNumber = "5511999999999";
+// WhatsApp da OCT Soluções (formato 55DDDNUMERO, só dígitos): +55 17 99774-6785
+const whatsappNumber = "5517997746785";
 // TODO: gerar uma imagem dedicada 1200x630 para Open Graph/Twitter em vez de reaproveitar a foto do produto.
 const ogImage = `${siteUrl}/oct/3521906_1_1772029733699f07257f6c8074733609.png`;
 // TODO: gerar um ícone quadrado dedicado (180x180) — a logo atual é retangular e fica cortada em telas de iOS.
@@ -206,7 +206,7 @@ export default function Home() {
             <div className="problem-intro">
               <p>Impressora, qualquer mercado compra. O que falta é tempo: alguém criando o cartaz, ajustando preço, mandando pra loja certa, toda vez que a oferta muda.</p>
               <p>Com a OCT Soluções, você cria o cartaz uma vez e o sistema cuida do resto: impressão automática, direto na impressora certa, na loja certa, sem retrabalho manual.</p>
-              <p>Funciona pra supermercado, mercadinho, loja de utilidade, açougue, mercearia e loja de festa. Qualquer varejo com comunicação que muda toda semana.</p>
+              <p>Funciona pra supermercado, mercadinho, loja de utilidade, açougue, mercearia e serv festa. Qualquer varejo com comunicação que muda toda semana.</p>
             </div>
           </div>
           <motion.div className="problem-list" {...reveal} variants={staggerGroup}>
